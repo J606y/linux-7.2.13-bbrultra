@@ -10,7 +10,13 @@ amd64 包在 Release v7.2.13-4：
 - `linux-headers-7.2.13-bbrultra_7.2.13-4_amd64.deb`
 - `linux-libc-dev_7.2.13-4_amd64.deb`
 
-aarch64 包还没有。
+aarch64 包也在 Release v7.2.13-4，包修订号是 7.2.13-1：
+
+- `linux-image-7.2.13-bbrultra_7.2.13-1_arm64.deb`
+- `linux-headers-7.2.13-bbrultra_7.2.13-1_arm64.deb`
+- `linux-libc-dev_7.2.13-1_arm64.deb`
+
+`config-arm64` 是这份 arm64 内核的配置。默认拥塞控制同样仍是 `bbr`，使用前要显式切换成 `bbrultra`。
 
 拥塞控制名是 `bbrultra`，需要 `fq`。随仓的 `config-amd64` 已内置 `bbrultra`，并把默认队列规则设为 `fq`。这份配置的默认拥塞控制仍是 `bbr`，使用前要显式切换：
 
